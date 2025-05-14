@@ -32,3 +32,6 @@ CLERK_SECRET_KEY=...
 ```bash
 VITE_CLERK_PUBLISHABLE_KEY=...
 ```
+
+Link to project: 
+https://spotifyclone-sxhl.onrender.com
