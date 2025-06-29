@@ -1,37 +1,64 @@
-<h1 align="center">Realtime Spotify Application </h1>
+# 🎧 SpotifyClone — UI/UX Clone with Streaming, Auth & Cloudinary
 
+A Spotify-inspired web application with media playback, album & track management, user authentication via Clerk, and media uploading to Cloudinary.
 
-- 🎸 Listen to music, play next and previous songs
-- 🔈 Update the volume with a slider
-- 🎧 Admin dashboard to create albums and songs
-- 💬 Real-time Chat App integrated into Spotify
-- 👨🏼‍💼 Online/Offline status
-- 👀 See what other users are listening to in real-time
-- 📊 Aggregate data for the analytics page
-- 🚀 And a lot more...
+## ✨ Features
 
-### Setup .env file in _backend_ folder
+- 🔑 OAuth login & session management (Clerk)
+- 🎵 Audio playback
+- 📂 Upload songs & albums
+- 🧩 Modular layout with Sidebar/NowPlaying
+- 🔄 Real-time interaction via WebSockets
+- 🎨 Responsive UI with Radix UI
+
+## 📁 Structure
+
+```
+spotifyClone/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── features/
+│   │   └── routes/
+├── backend/
+│   ├── src/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── controllers/
+│   │   └── utils/
+│   ├── seeds/
+│   └── .env
+```
+
+## ⚙️ Setup
 
 ```bash
-PORT=...
-MONGODB_URI=...
-ADMIN_EMAIL=...
-NODE_ENV=...
+cd frontend && npm install
+cd ../backend && npm install
 
+cd backend && npm run dev
+cd ../frontend && npm run dev
+```
+
+Seed data:
+```bash
+cd backend
+npm run seed:songs
+npm run seed:albums
+```
+
+`.env` backend:
+
+```
+MONGO_URI=...
+CLERK_SECRET_KEY=...
+CLOUDINARY_CLOUD_NAME=...
 CLOUDINARY_API_KEY=...
 CLOUDINARY_API_SECRET=...
-CLOUDINARY_CLOUD_NAME=...
-
-
-CLERK_PUBLISHABLE_KEY=...
-CLERK_SECRET_KEY=...
 ```
 
-### Setup .env file in _frontend_ folder
+---
 
-```bash
-VITE_CLERK_PUBLISHABLE_KEY=...
-```
+## 📃 License
 
-Link to project: 
-https://spotifyclone-sxhl.onrender.com
+All projects are licensed under the MIT License.
